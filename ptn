@@ -10,7 +10,7 @@ for i in range(0,len(a)):
 print (c)
 g=open(".txt","w")
 g.write(str(c))
-g.close()                     ეს იწერება ყოველთვის როცა გეუბნება რო write into the file 
+g.close()                     
 2.	Write the class called Tuple. It must have the constructor, in constructor the empty tuple must be created and printed. The class must have the method add, which adds 4 elements to the tuple. It must have the method remove, which removes two elements from the tuple. The class must have beautiful print.
 class Tuple:
     def __init__(self):
@@ -19,9 +19,10 @@ class Tuple:
         self.a +=(b,c,d,e)
     def remove(self):
         if len(self.a) >= 2:
-            self.a=self.a[:2]   ეს შლის ბოლო ორს და თუ პირველი ორი გექნება პირობაში მაშინ დაწერ 2:
+            self.a=self.a[:2]   
+2:
     def __str__(self):
-        return str(self.a)       როცა class წერ და პირობაში წერია beautiful print ყოველთვის წერ ამას
+        return str(self.a)      
 g=Tuple()
 g.add(1,2,3,4)
 print(g.a)
@@ -51,9 +52,8 @@ for key in a.keys():
         oddkeys.append(key)
 print(a, oddkeys, oddvalues, evenkeys, evenvalues)
 g=open("file2","w")
-g.write(str(oddkeys)+"\n") როცა გეუბნება რო ფაილში ჩაწერეო და თან სხვადასხვა ხაზზე სულ წერ ამას +“\n“
-g.write(str(oddvalues)+"\n")     და თუ დააკვირდები ყველა პასუხი ცალცალკე g.writeით უნდა ჩაიწერო
-g.write(str(evenkeys)+"\n")
+g.write(str(oddkeys)+"\n")
+g.write(str(oddvalues)+"\n")     
 g.write(str(evenvalues)+"\n")
 g.close()
 
@@ -71,4 +71,16 @@ b = [random.randrange(1, 10) for _ in range(100)]
 print( b)
 c = convert(b)
 print(c)
+
+5.
+You have the following tuple: ((“hi”,20),(“no”,50),(“look”,25),(“good”,50)). The function must write the following tuples to the file: (“hi”,”no”,”look”,”good”) and (20,50,25). In the second tuple there are only unique numbers.
+
+a=("hi" ,20), ("no" ,50), ("look",25), ("good", 50)
+words=()
+number=()
+for i,j in a:
+      words+=(i,)
+      if j not in number:
+            number+=(j, )
+print (words, number)
 
